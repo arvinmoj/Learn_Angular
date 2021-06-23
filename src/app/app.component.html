@@ -1,10 +1,88 @@
 <div class="p-2">
     <br>
     <b class="typing-span">Enter Text : </b>
-    <input class="typing-input" type="text" [(ngModel)]=name/>
+    <input class="typing-input" type="text" maxlength="10" [(ngModel)]=name/>
     <br>
     <br>
-    <h3 class="typing-h3">Your Text : {{ name}}</h3>
-    <h3 class="typing-h3">Lowercase : {{ name | lowercase}}</h3>
-    <h3 class="typing-h3">Uppercase : {{ name | uppercase}}</h3>
+    <b class="typing-span">Your Text</b>
+    <h3 class="typing-h3">{{ name }}</h3>
+    <b class="typing-span">Lowercase</b>
+    <h3 class="typing-h3">{{ name | lowercase}}</h3>
+    <b class="typing-span">Uppercase</b>
+    <h3 class="typing-h3">{{ name | uppercase}}</h3>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div class="P-2">
+    <br>
+    <b class="typing-span">Enter Number (x) : </b>
+    <input class="typing-input" type="number" [(ngModel)]="number1">
+    <br>
+    <br>
+    <b class="typing-span">Enter Number (y) : </b>
+    <input class="typing-input" type="number" [(ngModel)]="number2">
+    <br>
+    <br>
+    <b class="typing-span">Sum</b>
+    <h3 class="typing-h3">{{ number1 + number2 }}</h3>
+    <b class="typing-span">Subtraction</b>
+    <h3 class="typing-h3">{{ number1 - number2 }}</h3>
+    <b class="typing-span">Multiplication</b>
+    <h3 class="typing-h3">{{ number1 * number2 }}</h3>
+    <b class="typing-span">Division</b>
+    <h3 class="typing-h3">{{ number1 / number2 }}</h3>
+</div>
+
+<br>
+<hr>
+<br>
+
+<b class="typing-span">Array</b>
+<div>
+    <h3 *ngFor="let item of fullNames">{{ item }}</h3>
+</div>
+
+<br>
+<hr>
+<br>
+
+<b class="typing-span">How Many User : </b>
+<input class="typing-input" type="text" [(ngModel)]="usernameCount" disabled>
+<br>
+<br>
+<div>
+    <h3 *ngFor=" let item of usernames ">{{ item }}</h3>
+</div>
+
+<br>
+<hr>
+
+<div class="p-2">
+
+    <b class="from-check-label typing-span">Show Array</b>
+    <input class="form-check-input typing-checkbox" type="checkbox" [(ngModel)]="display">
+    <div *ngIf="display">
+        <br>
+        <h3 *ngFor="let item of fullNames">{{ item }}</h3>
+    </div>
+</div>
+
+<hr>
+
+<div class="p-2">
+    <b class="from-check-label typing-span">Hide Array</b>
+    <input class="form-check-input typing-checkbox" type="checkbox" [(ngModel)]="hide">
+    <div [hidden]="!hide">
+        <br>
+        <h3 *ngFor="let item of fullNames">{{ item }}</h3>
+    </div>
+</div>
+
+<hr>
+
+<div class="p-2">
+    <b class="typing-span">Person</b>
 </div>

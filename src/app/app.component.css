@@ -4,18 +4,37 @@ h3 {
     width: 400px;
 }
 
+li {
+    color: black;
+    background-color: gold;
+    width: 400px;
+    padding: 2px;
+}
+
+hr {
+    color: #ffffff;
+    height: 2px;
+}
+
 .typing-input {
     font-size: 20px;
     padding-left: 5px;
 }
 
 .typing-span {
-    font-size: 20px;
     color: white;
+    font-size: 20px;
     font-weight: 500;
 }
 
 .typing-h3 {
     padding: 2px;
     text-align: center;
+}
+
+.typing-checkbox {
+    margin-top: 7px;
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
 }
