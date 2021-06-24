@@ -85,4 +85,53 @@
 
 <div class="p-2">
     <b class="typing-span">Person</b>
+    <br>
+    <br>
+    <b class="typing-span">Active</b>
+    <input class="form-check-input typing-checkbox" type="checkbox" [(ngModel)]="person.active" disabled>
+    <br>
+    <br>
+    <b class="typing-span">Id</b>
+    <h3 class="typing-h3">{{person.id}}</h3>
+    <b class="typing-span">FullName</b>
+    <h3 class="typing-h3">{{person.fullName}}</h3>
+    <b class="typing-span">Age</b>
+    <h3 class="typing-h3">{{person.age}}</h3>
+    <b class="typing-span">EmailAddress</b>
+    <h3 class="typing-h3">{{person.emailAddress}}</h3>
 </div>
+
+<hr>
+
+<div class="p-2">
+    <b class="p-1 typing-span"> Show Alert</b>
+    <button class="btn btn-warning" type="button" (click)=onClick()>Click Me !</button>
+</div>
+
+<hr>
+
+<b class="typing-span">Users</b>
+
+<ul *ngFor="let item of user;">
+    <li>
+        Username : {{ item.username }} | Password : {{ item.password }}
+    </li>
+</ul>
+
+<hr>
+
+<b class="typing-span">Cars</b>
+<br>
+<br>
+<ul *ngFor="let item of car;">
+    <button type="button" (click)=details(item)>Details {{item.codeNumber}}</button>
+    <li>
+        Name: {{ item.name }} | Color : {{ item.color }}
+    </li>
+</ul>
+
+<br>
+<ul>
+    <b class="typing-span">Show Details</b>
+    <li id="div"></li>
+</ul>
