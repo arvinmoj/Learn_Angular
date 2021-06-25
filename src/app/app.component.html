@@ -156,13 +156,8 @@
     </select>
 </div>
 
-<br>
-
-<b class="typing-span">User DropDown</b>
-
-<br>
 <hr>
-<br>
+<b class="typing-span">User DropDown</b>
 
 <div class="col-6">
     <select class="form-select form-select mb-1" [(ngModel)]="selectUsers">
@@ -178,8 +173,22 @@
     <h3 *ngIf=" selectUsers === undefined ">The Selected User is absolutely [undefined] !</h3>
 </div>
 
-<br>
 <hr>
+
+<b class="typing-span">Country</b>
+<br>
+<div class="col-6">
+    <select class="form-select form-select mb-1" [(ngModel)]="selectCountryId">
+        <option [ngValue]="null" >Select an item</option>
+        <hr>
+        <option *ngFor="let item of countries" [ngValue]="item.id" >Name : {{ item?.name}} | PhoneCode : {{ item?.phoneCode}}</option>
+    </select>
+    <br>
+    <h3>Id : {{ selectCountryId }}</h3>
+</div>
+
+<hr>
+<br>
 
 <b class="typing-span">ng-container</b>
 <br>

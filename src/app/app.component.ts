@@ -4,12 +4,15 @@ import { Component } from '@angular/core';
 // Interfaces
 import * as InterfaceCars from './interfaces/car';
 import * as InterfaceUsers from './interfaces/user';
-import * as InterfacePersons from './interfaces/person';
+import * as InterfacePerson from './interfaces/person';
+import * as InterfaceCountries from './interfaces/country';
+
 
 // Models
 import * as ModelCars from './models/car';
 import * as ModelUsers from './models/user';
-import * as ModelPersons from './models/person';
+import * as ModelPerson from './models/person';
+import * as ModelCountries from './models/country';
 
 @Component({
   selector: 'app-root',
@@ -40,7 +43,7 @@ export class AppComponent {
     this.display = false;
     this.hide = true;
 
-    this.person = new ModelPersons.Person(
+    this.person = new ModelPerson.Person(
       '87B69FC999A0',
       20,
       true,
@@ -90,6 +93,20 @@ export class AppComponent {
 
     }
 
+    let id: number  = 0 ;
+
+    this.countries = [
+
+      new ModelCountries.Country(id+1 , "Iran" , 98),
+      new ModelCountries.Country(id+2 , "Iran" , 98),
+      new ModelCountries.Country(id+3 , "Iran" , 98),
+      new ModelCountries.Country(id+4 , "Iran" , 98),
+      
+    ];
+
+    this.selectCountryId = null;
+
+
   }
 
   public name: string;
@@ -110,10 +127,13 @@ export class AppComponent {
   public user: InterfaceUsers.User[];
   public selectUsers: InterfaceUsers.User | null;
 
-  public person: InterfacePersons.Person;
+  public person: InterfacePerson.Person;
 
   public numbers:number [];
   public selectNumbers: number | null;
+
+  public selectCountryId: number | null;
+  public countries: InterfaceCountries.Country[];
 
   public onClick(): void {
     alert('Hello Arvinmoj');
