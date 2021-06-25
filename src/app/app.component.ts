@@ -56,12 +56,38 @@ export class AppComponent {
 
     this.user = [
       new ModelUsers.User('Arvinmoj', '!1q2w3e!'),
-      new ModelUsers.User('shervin', 'sErVin'),
+      new ModelUsers.User('mom', 'sErVin'),  
+      new ModelUsers.User('Ali', 'AlaHm'),
+      new ModelUsers.User('moj', 'mojMOJ'),
+
     ];
 
+    this.selectUsers = null;
+
+    for (let index: number = 1; index < this.user.length; index++) {
+      
+      let currentUsers: InterfaceUsers.User = this.user[index++]
+
+      if (currentUsers.username === 'moj') {
+
+        this.selectUsers = currentUsers;
+        break;
+        
+      }
+      
+    }
+
     this.car = [];
-    for (let index: number = 0; index < 20; index++) {
+    for (let index: number = 0; index < 10; index++) {
       this.car.push(new ModelCars.Car('BMW', 2000, 'Black', index + 1));
+    }
+
+    this.numbers=[]
+    this.selectNumbers = null;
+    for (let index = 0; index < 5; index++) {
+
+      this.numbers.push(index+1)
+
     }
 
   }
@@ -80,8 +106,14 @@ export class AppComponent {
   public display: boolean;
 
   public car: InterfaceCars.Car[];
+
   public user: InterfaceUsers.User[];
+  public selectUsers: InterfaceUsers.User | null;
+
   public person: InterfacePersons.Person;
+
+  public numbers:number [];
+  public selectNumbers: number | null;
 
   public onClick(): void {
     alert('Hello Arvinmoj');

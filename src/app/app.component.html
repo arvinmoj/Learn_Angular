@@ -1,4 +1,5 @@
 <div class="p-2">
+
     <br>
     <b class="typing-span">Enter Text : </b>
     <input class="typing-input" type="text" maxlength="10" [(ngModel)]=name/>
@@ -7,9 +8,10 @@
     <b class="typing-span">Your Text</b>
     <h3 class="typing-h3">{{ name }}</h3>
     <b class="typing-span">Lowercase</b>
-    <h3 class="typing-h3">{{ name | lowercase}}</h3>
+    <h3 class="typing-h3">{{ name | lowercase }}</h3>
     <b class="typing-span">Uppercase</b>
-    <h3 class="typing-h3">{{ name | uppercase}}</h3>
+    <h3 class="typing-h3">{{ name | uppercase }}</h3>
+
 </div>
 
 <br>
@@ -112,6 +114,9 @@
 
 <b class="typing-span">Users</b>
 
+<br>
+<br>
+
 <ul *ngFor="let item of user;">
     <li>
         Username : {{ item.username }} | Password : {{ item.password }}
@@ -135,3 +140,53 @@
     <b class="typing-span">Show Details</b>
     <li id="div"></li>
 </ul>
+
+<hr>
+
+<b class="typing-span">Person DropDown</b>
+
+<br>
+<br>
+
+<div class="col-6">
+    <select class="form-select form-select mb-1" [(ngModel)]="selectNumbers">
+        <option [ngValue]="null" >Select an item</option>
+        <hr>
+        <option *ngFor="let item of numbers" [ngValue]="item" >Item : {{ item }}</option>
+    </select>
+</div>
+
+<br>
+
+<b class="typing-span">User DropDown</b>
+
+<br>
+<hr>
+<br>
+
+<div class="col-6">
+    <select class="form-select form-select mb-1" [(ngModel)]="selectUsers">
+        <option [ngValue]="null" >Select an item</option>
+        <hr>
+        <option *ngFor="let item of user" [ngValue]="item" >Username : {{ item?.username }}</option>
+        <hr>
+        <option *ngFor="let item of user" [ngValue]="undefined" >Password : {{ item }}</option>
+    </select>
+    <br>
+    <h3 *ngIf=" selectUsers === null ">The Selected User is absolutely [Null] !</h3>
+    <h3 *ngIf=" selectUsers != null ">The Selected User is absolutely [Not Null] !</h3>
+    <h3 *ngIf=" selectUsers === undefined ">The Selected User is absolutely [undefined] !</h3>
+</div>
+
+<br>
+<hr>
+
+<b class="typing-span">ng-container</b>
+<br>
+<br>
+<div class="p-2 text-light">
+    <ng-container>{{person?.fullName}}</ng-container>
+</div>
+
+<br>
+<hr>
