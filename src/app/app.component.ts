@@ -108,6 +108,12 @@ export class AppComponent {
 
     this.errorMessage = 'Message';
 
+    this.errorMessages = [];
+    for (let index = 1; index < 5; index++) {
+
+      this.errorMessages.push("Error" + index.toString())
+      
+    }
 
   }
 
@@ -138,6 +144,7 @@ export class AppComponent {
   public countries: InterfaceCountries.Country[];
 
   public errorMessage: string;
+  public errorMessages: string[];
 
   public onClick(): void {
     alert('Hello Arvinmoj');

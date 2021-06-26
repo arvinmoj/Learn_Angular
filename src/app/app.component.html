@@ -106,7 +106,7 @@
 <hr>
 
 <div class="p-2">
-    <b class="p-1 typing-span"> Show Alert</b>
+    <b class=" typing-span"> Show Alert</b> |
     <button class="btn btn-warning" type="button" (click)=onClick()>Click Me !</button>
 </div>
 
@@ -201,5 +201,7 @@
 
 <app-currency-converter></app-currency-converter>
 <hr>
-<app-display-error-message [message]='errorMessage'></app-display-error-message>
+<display-error-message [message]='errorMessage'></display-error-message>
+<hr>
+<display-error-messages [messages]='errorMessages'></display-error-messages>
 <hr>

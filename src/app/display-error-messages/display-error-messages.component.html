@@ -1,0 +1,10 @@
+<b class="typing-span">Error Messages</b> |
+<br>
+<br>
+<b class="from-check-label typing-span">Show All Error </b>
+<input class="form-check-input typing-checkbox" type="checkbox" [(ngModel)]="display">
+<br>
+<br>
+<div [hidden]="!display " class="alert alert-warning" role="alert" *ngFor="let item of messages">
+    {{ item }}
+</div>
