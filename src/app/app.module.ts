@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CurrencyConverterComponent } from './currency-converter/currency-converter.component';
+import { DisplayErrorMessageComponent } from './display-error-message/display-error-message.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { CurrencyConverterComponent } from './currency-converter/currency-conver
 
     AppComponent,
      CurrencyConverterComponent,
+     DisplayErrorMessageComponent,
 
   ],
   imports: [

@@ -106,6 +106,8 @@ export class AppComponent {
 
     this.selectCountryId = null;
 
+    this.errorMessage = 'Message';
+
 
   }
 
@@ -134,6 +136,8 @@ export class AppComponent {
 
   public selectCountryId: number | null;
   public countries: InterfaceCountries.Country[];
+
+  public errorMessage: string;
 
   public onClick(): void {
     alert('Hello Arvinmoj');

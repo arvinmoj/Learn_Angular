@@ -158,7 +158,8 @@
 
 <hr>
 <b class="typing-span">User DropDown</b>
-
+<br>
+<br>
 <div class="col-6">
     <select class="form-select form-select mb-1" [(ngModel)]="selectUsers">
         <option [ngValue]="null" >Select an item</option>
@@ -176,6 +177,7 @@
 <hr>
 
 <b class="typing-span">Country</b>
+<br>
 <br>
 <div class="col-6">
     <select class="form-select form-select mb-1" [(ngModel)]="selectCountryId">
@@ -198,3 +200,6 @@
 <hr>
 
 <app-currency-converter></app-currency-converter>
+<hr>
+<app-display-error-message [message]='errorMessage'></app-display-error-message>
+<hr>
